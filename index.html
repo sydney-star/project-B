@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://fontawesome.com/v4.7/icons/"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Awesome search-box</title>
+</head>
+
+<body>
+    <!-- <div class="login-page">
+        <div class="form">
+            <h1>User Login</h1>
+            <form action="" class="login-form">
+                <input type="text" placeholder="Email"><br>
+                <input type="text" placeholder="password"><br>
+                <input type="button" value="Login">
+            </form>
+            <h1>Registration-Account</h1>
+            <form action="" class="registration-form">
+                <input type="text" placeholder="Enter-ID"><br>
+                <input type="text" placeholder="First-name"><br>
+                <input type="text" placeholder="Last-name"><br>
+                <input type="text" placeholder="Email"><br>
+                <input type="text" placeholder="password"><br>
+                <input type="text" placeholder="Confirm-password"><br>
+                <input type="text" placeholder="Phone"><br>
+                <input type="button" value="Register">
+            </form>
+        </div>
+
+    </div> -->
+    <div class="heading">
+        <h1><em>Farm-Tech</em> Consultancy</h1>
+        <hr />
+    </div>
+    
+
+    <div class="main-page">
+        <div class="info">
+            <h3>Our Vision</h3>
+            <p>our vision is to validate farmers agricultural link web application and to make it the best application in
+                the
+                country</p>
+            <h3>Our Mission</h3>
+            <p>our Mission is to link farmers with agricultural Officers to allow them acquire useful agricultural
+                information
+                for them to achieve quality and quantity farm Products 
+            </p>
+            <div class="get-started">
+                <h2>Login or Register to get started <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h2>
+            </div>
+        </div>
+    
+        <div class="login-page">
+            <h3>Login Here</h3>
+            <div class="form">
+    
+                <form action="/registration" method="POST" class="registration-form">
+                    <input type="text" name="fname" placeholder="First name">
+                    <input type="text" name="lname" placeholder="Last name">
+                    <input type="password" name="pass" placeholder="Password">
+                    <input type="password" name="cpass" placeholder="Confirm password">
+                    <input type="tel" name="phone" placeholder="Phone number">
+                    <input type="email" name="email" placeholder="Email">
+                    <button value="submit">Register</button>
+                    <p class="message">Already registerd? <a href="#">Login</a></p>
+                </form>
+    
+                <form action="/logindetails" method="POST" class="login-form">
+                    <input type="text" name="username" placeholder="username">
+                    <input type="password" name="pass" placeholder="Password">
+    
+                    <p class="message">Not registerd? <a href="#">Register</a></p>
+    
+                    <!-- <input type="submit">Login</input> -->
+                    <button value="submit">Login</button>
+                    <a href="main.html">login here</a>
+    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        //jquery code to toggle between login and registration
+        $('.message a').click(function () {
+            $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+
+            $('#login').click(() => {
+                $.ajax({
+                    url: '/auth',
+                    type: 'GET',
+                    dataType: 'application/json',
+                    success: (data) => {
+                        console.log("successful")
+                    }
+
+                });
+
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

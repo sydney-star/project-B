@@ -1,0 +1,68 @@
+.contact-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.contact-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contact-div .icon{
+    margin-top: 50px;
+}
+
+.icon{
+    margin: 40px;
+}
+.icon i{
+    width: 70px;
+}
+
+.contact-div h3,.contact-head{
+    color: green;
+}
+
+.contact-form input,textarea{
+    width: 100%;
+    margin: 5px;
+    font-size: 22px;
+    background-color: whitesmoke ;
+    border-bottom: 5px solid grey;
+}
+.form{
+    width: 40%;
+}
+
+.heading{
+    text-align: center;
+}
+
+.contact-button{
+    background-color: green;
+    border-radius: 20px;
+    font-size: 24px;
+    text-transform: capitalize;
+    width: 100%;
+}
+.contact-button:hover{
+   background-color: teal;
+   cursor: pointer;
+}
+
+.social-sites{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.social-sites h2{
+    width: 0 auto;
+}
+.site-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
