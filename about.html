@@ -10,23 +10,134 @@
 </head>
 
 <body>
-    <div class="heading">
-        <h1>About us</h1>
-        <p>Farmers Agricultural Officers Link web application was founded on 19-09-2021 to help provide quality
-            services to farmers and validate farmers agricultural link web application </p>
+    <div class="about-page">
+        <div class="heading">
+            <h1>About us</h1>
+            <p>Farmers Agricultural Officers Link web application was founded on 19-09-2021 to help provide quality
+                services to farmers and validate farmers agricultural link web application </p>
+        </div>
+    
+        <div class="info">
+            <h3>Our Vision</h3>
+            <p>our vision is to validate farmers agricultural link web application and to make it the best application in
+                the
+                country</p>
+            <h3>Our Mission</h3>
+            <p>our Mission is to link farmers with agricultural Officers to allow them acquire useful agricultural
+                information
+                for them to achieve quality and quantity farm Products
+            </p>
+        </div>
     </div>
+    <h2 class="do">What We Do</h2>
+    <div class="services">
+        <div>
+            <h3>Seed testing for germination, varietal purity, disease screening.</h3>
+            <img src="./images/seedtesting.jpg" />
+            <p class="lorem" id="lorem-toggle">
+                In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the
+                visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used
+                as a placeholder before final copy is available.
+            </p>
+        </div>
+        <div>
+            <h3>Weed control measures.</h3>
+            <img src="./images/weedcontrol.jpg" alt="">
+            <p class="lorem" id="lorem-weed">
+                In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the
+                visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used
+                as a placeholder before final copy is available.
+            </p>
+        </div>
+        <div>
+            <h3>Checking on farm soil fertility.</h3>
+            <img src="./images/soilfertility.jpg" alt="">
+            <p class="lorem" id="lorem-soil">
+                In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the
+                visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used
+                as a placeholder before final copy is available.
+            </p>
+        </div>
 
-    <div class="info">
-        <h3>Our Vision</h3>
-        <p>our vision is to validate farmers agricultural link web application and to make it the best application in
-            the
-            country</p>
-        <h3>Our Mission</h3>
-        <p>our Mission is to link farmers with agricultural Officers to allow them acquire useful agricultural
-            information
-            for them to achieve quality and quantity farm Products
-        </p>
+        <button class="readmore-button" id="moreButton" onclick="readMore()">Read more</button>
+        <div class="hide-services" id="hideServices">
+            <div>
+                <h3>Giving information on various agricultural practices.</h3>
+                <img src="./images/givinginfo.jpg" alt="">
+                <p class="lorem" id="lorem-practice">
+                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the
+                    visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used
+                    as a placeholder before final copy is available.
+                </p>
+            </div>
+            <div>
+                <h3>Plants and animals pest and disease control measures.</h3>
+                <img src="./images/pestscontrol.jpg" alt="">
+                <p class="lorem" id="lorem-disease">
+                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the
+                    visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used
+                    as a placeholder before final copy is available.
+                </p>
+            </div>
+            <div>
+                <h3>Farm management practices eg prunning, spraying, weeding e.t.c </h3>
+                <img src="./images/prunning.jpg" alt="">
+                <p class="lorem" id="lorem-prun">
+                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the
+                    visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used
+                    as a placeholder before final copy is available.
+                </p>
+            </div>
+        </div>
+
     </div>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Farmers Agricultural Officers Link</h3>
+                <p><em>Farmers Agricultural Officers Link web application was founded on 19-09-2021 to help provide
+                        quality
+                        services to farmers and validate farmers agricultural link web application</em>
+                </p>
+                <p><em>Please you are free to reach us any time. We operate 24 hours</em></p>
+                <p><em>+254769 461639</em></p>
+                <p><em>info@sydney.co.ke</em></p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="">Galleries</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-forms">
+                <h3>Leave a Message/Report</h3>
+                <textarea type="text" name="message" id="message" cols="30" rows="5"></textarea>
+                <br />
+                <button>SEND</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2021 Customers Link Application| Designed and Developed by Sydney nangulu - 0713627939 -
+            Email:sydney@gmail.com
+        </div>
+    </div>
+    <script>
+        function readMore() {
+            var x = document.getElementById("hideServices");
+            var y = document.getElementById("moreButton")
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                y.innerHTML = "Read less"
+            } else {
+                x.style.display = "none"
+                y.innerHTML = "Read more"
+            }
+        }
+    </script>
+    
 </body>
 
 </html>
