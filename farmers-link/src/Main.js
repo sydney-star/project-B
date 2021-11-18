@@ -19,7 +19,7 @@ export class Main extends Component {
           <Query path="/query-response" />
           <Contact path="/contact"/>
         </Router>
-        {/* <Footer /> */}
+        <Footer />
       </>
     );
   }

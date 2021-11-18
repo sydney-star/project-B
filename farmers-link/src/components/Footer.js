@@ -1,62 +1,38 @@
 import React, { Component } from "react";
-
+import '../css/Footer.css'
+import {FaEnvelope, FaFacebook, FaInstagram, FaPhoneAlt, FaTwitter, FaWhatsapp} from 'react-icons/fa'
 export class Footer extends Component {
   render() {
     return (
-      <div>
-        <div class="footer">
-          <div class="footer-content">
-            <div class="footer-section about">
-              <h3>Farmers Agricultural Officers Link</h3>
-              <p>
-                <em>
-                  Farmers Agricultural Officers Link web application was founded
-                  on 19-09-2021 to help provide quality services to farmers and
-                  validate farmers agricultural link web application
-                </em>
-              </p>
-              <p>
-                <em>
-                  Please you are free to reach us any time. We operate 24 hours
-                </em>
-              </p>
-              <p>
-                <em>+254769 461639</em>
-              </p>
-              <p>
-                <em>info@sydney.co.ke</em>
-              </p>
+      <div className="footer">
+        <div>
+          <section>
+            <div>
+              <h3>Farmers Link</h3>
+              <p>This is a web application which links farmers and agricultural officers</p>
             </div>
-            <div class="footer-section links">
-              <h3>Quick Links</h3>
-              <ul class="footer-links">
-                <li>
-                  <a href="#">Events</a>
-                </li>
-                <li>
-                  <a href="#">Contacts</a>
-                </li>
-                <li>
-                  <a href="">Galleries</a>
-                </li>
-                <li>
-                  <a href="#">Help</a>
-                </li>
-              </ul>
+            <div className="footer-contacts">
+              <h3>Contact us</h3>
+              <p> <a href="#" > <FaEnvelope /><em>email </em></a></p>
+              <p> <a href="#"><FaPhoneAlt /><em>call </em></a></p>
+              <p> <a href="#"><FaWhatsapp /><em>whatsApp </em></a></p>
             </div>
-            <div class="footer-section contact-forms">
-              <h3>Leave a Message/Report</h3>
-              <textarea
-                type="text"
-                name="message"
-                id="message"
-                cols="30"
-                rows="5"
-              ></textarea>
-              <br />
-              <button>SEND</button>
+            <div className="footer-services">
+              <h3>Links</h3>
+              <p><a href="#">services </a></p>
+              <p><a href="#">google map</a></p>
+              <p><a href="#">products review</a></p>
+              <p><a href="#"></a></p>
             </div>
+          </section>
+          <div className="socials">
+            <em><a href="#"><FaFacebook /> </a></em>
+            <em><a href="#"><FaInstagram /> </a></em> 
+            <em><a href="#"><FaTwitter /></a></em>
           </div>
+        </div>
+        <div className="footer-bottom">
+          @copy; 2021 Farmers Link platform | Designed and Developed by Sydney Nangulu | 0769123939 Email-nagulusimiti@gmail.com
         </div>
       </div>
     );

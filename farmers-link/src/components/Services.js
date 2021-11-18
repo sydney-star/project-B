@@ -39,7 +39,9 @@ export class Services extends Component {
               environmental fluctuation that can cast doubt on the true
               viability of the seeds (did the seeds fail to germinate because
               they were dead, or because they were watered erratically, fell
-              victim to fungal attack, got too hot, etc.?).
+              victim to fungal attack, got too hot, etc.?). 
+              <br />
+            <button className="service-button">Get this service</button>
             </p>
           </div>
         </div>
@@ -67,6 +69,8 @@ export class Services extends Component {
               Services, Rodent Control Services, Carpet Cleaning Services,
               Carpet Treatment Services, Wood Borer Services, Garden Treatment
               Services, Moths Pest Control Services.
+              <br />
+            <button className="service-button">Get this service</button>
             </p>
           </div>
         </div>
@@ -88,6 +92,8 @@ export class Services extends Component {
               combination with our in-house developed tools, our apps provide
               you with on-the-spot, fast, integrable and reliable data and
               customizable farm management recommendations.
+              <br />
+            <button className="service-button">Get this service</button>
             </p>
           </div>
         </div>
@@ -116,6 +122,8 @@ export class Services extends Component {
               provide genetically-modified organisms, develop vaccines, provide
               bioanalytic services, and clone crops. Grooming services: Maintain
               animal appearances via bathing, shearing, and trimming processes.
+              <br />
+            <button className="service-button">Get this service</button>
             </p>
           </div>
         </div>
@@ -140,6 +148,8 @@ export class Services extends Component {
               Burial of carcass Burning of carcass Disinfection of animal houses
               Disinfection of pastures Common disinfectants and their usage
               General Disease Prevention Measures
+              <br />
+            <button className="service-button">Get this service</button>
             </p>
           </div>
         </div>
@@ -168,6 +178,8 @@ export class Services extends Component {
               spectral response. Agricultural water management: information on
               the water management strategy adopted for each FMU should be
               collected.
+              <br />
+            <button className="service-button">Get this service</button>
             </p>
           </div>
         </div>

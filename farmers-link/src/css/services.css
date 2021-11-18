@@ -17,6 +17,8 @@
 }
 .service.header {
   font-weight: bolder;
+  color: green;
+  font-size: 22px;
 }
 .service img {
   max-width: 300px;
@@ -26,4 +28,12 @@
 }
 .service p {
   margin: 20px;
+}
+
+.service-button{
+  background-color: wheat;
+  width: 20%;
+  font-size: 22px;
+  height: 45px;
+  margin-top: 20px;
 }

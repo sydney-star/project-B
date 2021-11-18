@@ -1,0 +1,29 @@
+.about-page{
+    background-color: whitesmoke;
+}
+
+.about-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-heading h1{
+    font-size: 34px;
+    color: teal;
+}
+
+.about-heading .first-div{
+    width: 40%;
+    margin: 20px;
+}
+
+.mission-vision{
+    margin: 30px;
+    margin-right: 40px;
+}
+
+.what-we-do .lorem{
+    display: none;
+    width: 60%;
+}

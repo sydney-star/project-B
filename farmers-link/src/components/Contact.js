@@ -1,34 +1,22 @@
 import React, { Component } from "react";
-import "../css/about.css";
+import { FaEnvelope, FaFacebook, FaInstagram, FaPhoneAlt } from "react-icons/fa";
+import "../css/contact.css";
+import { FaHome, FaTwitter } from "react-icons/fa";
+import ContactBackground from '../images/contactUsImage.jpg'
 
 export class Contact extends Component {
   render() {
     return (
-        <div class="contact-page">
-
-          <div class="form">
-            <form action="contact us" method="post" class="contact-form">
-              <input type="text" name="fname" placeholder="First name" />
-              <input type="text" name="email" placeholder="Email" />
-              <input type="text" name="phone" placeholder="Phone" />
-              <textarea
-                name=""
-                id=""
-                cols="30"
-                rows="10"
-                placeholder="Leave us Message here..."
-              ></textarea>
-              <button class="contact-button">Send</button>
-            </form>
-          </div>
+      <div className="contact-body" style={{ 'backgroundImage': `url(${ContactBackground})` }}>
+        <h1 className="contact-header">Contact Us Here</h1>
+        <div className="contact-page">
 
 
-          <div>
-            <p class="contact-head">Get in touch</p>
-            <h1>Contact Us</h1>
+          {/* <p class="contact-head">Get in touch</p> */}
+          <div className="contact-content">
             <div class="contact-div">
               <div class="icon">
-                <i class="fa fa-home"></i>
+                <FaHome />
               </div>
               <div>
                 <h3>Address</h3>
@@ -38,7 +26,7 @@ export class Contact extends Component {
             </div>
             <div class="contact-div">
               <div class="icon">
-                <i class="fa fa-phone"></i>
+                <FaPhoneAlt />
               </div>
               <div>
                 <h3>Phone</h3>
@@ -48,7 +36,7 @@ export class Contact extends Component {
             </div>
             <div class="contact-div">
               <div class="icon">
-                <i class="fa fa-envelope"></i>
+                <FaEnvelope />
               </div>
               <div>
                 <h3>Email</h3>
@@ -63,6 +51,31 @@ export class Contact extends Component {
           </div>
 
         </div>
+        <div className="contact-info">
+          <div className="contact-form">
+            <form action="contact us" method="post" class="contact-form">
+              <input type="text" className="text" placeholder="Email address" />
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="5"
+                placeholder="Leave us Message here...">
+              </textarea>
+              <button class="contact-button">Send</button>
+            </form>
+          </div>
+          <div>
+            <h2 className="contact-header">Follow us</h2>
+            <div className="follow-links">
+              <span> <a href="#"><FaFacebook /><em>Facebook</em> </a></span>
+              <span> <a href="#"><FaTwitter />Twitter </a></span>
+              <span> <a href="#"><FaInstagram />Instagram </a></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     );
   }
 }

@@ -1,22 +1,44 @@
 .contact-page{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 90%;
+    justify-content: space-between;
+    width: 70%; */
+}
+
+.contact-body{
+  opacity: 0.9;
 }
 
 .contact-div{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background-color: rgba(0, 128, 128, 0.452);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+    width: 30%;
 }
 
 .contact-div .icon{
     margin-top: 50px;
 }
 
+.contact-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* background-color: rgba(0, 128, 128, 0.452); */
+}
+
+.contact-body{
+    background-color: whitesmoke;
+}
+
 .icon{
     margin: 40px;
+    font-size: 30px;
 }
 .icon i{
     width: 70px;
@@ -33,8 +55,17 @@
     background-color: whitesmoke ;
     border-bottom: 5px solid grey;
 }
-.form{
-    width: 40%;
+.contact-form{
+    width: 50%;
+    margin-left: 1%;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    margin-right: 4%;
+    margin-left: 1%;
 }
 
 .heading{
@@ -42,14 +73,15 @@
 }
 
 .contact-button{
-    background-color: green;
-    border-radius: 20px;
+    background-color: teal;
+    /* border-radius: 20px; */
     font-size: 24px;
     text-transform: capitalize;
-    width: 100%;
+    width: 40%;
+    margin: 5px;    
 }
 .contact-button:hover{
-   background-color: teal;
+   background-color: wheat;
    cursor: pointer;
 }
 
@@ -73,6 +105,21 @@
     font-size: 22px;
 }
 
+
+.contact-header{
+    text-align: center;
+    color: indianred;
+}
+
+.follow-links span{
+    margin: 10px;
+}
+
+.follow-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
 
 .footer-content{
     background: #3e3e42;

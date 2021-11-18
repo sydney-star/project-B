@@ -1,65 +1,90 @@
 import React, { Component } from "react";
 import "../css/login.css";
-
+import LoginImage from '../images/loginImage.png'
+import {FaArrowAltCircleRight, FaArrowRight} from 'react-icons/fa'
 export class Login extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      showLogin: true,
+      btnText: 'New user? Register'
+    }
+
+    this.toggleForm = this.toggleForm.bind(this)
+  }
+
+  toggleForm() {
+    if (this.state.showLogin === true) {
+      this.setState({ showLogin: false, btnText: 'New user? Register' }, () => {
+        document.getElementById('loginform').style.display = 'block'
+        document.getElementById('registerform').style.display = 'none'
+      })
+    } else {
+      this.setState({ showLogin: true, btnText: 'Login' }, () => {
+        document.getElementById('registerform').style.display = "block"
+        document.getElementById('loginform').style.display = "none"
+      })
+    }
+  }
   render() {
     return (
       <div>
-        <div className="header">
-          <h1>Farmetech Consultancy</h1>
-        </div>
         <div class="main-page">
           <div class="info">
-            <h3>Our Vision</h3>
-            <p>
-              our vision is to validate farmers agricultural link web
-              application and to make it the best application in the country
-            </p>
-            <h3>Our Mission</h3>
-            <p>
-              our Mission is to link farmers with agricultural Officers to allow
-              them acquire useful agricultural information for them to achieve
-              quality and quantity farm Products
-            </p>
+            <div className="header">
+              <h1>Farmtech Consultancy</h1>
+              <h4>Where farmers get quality services</h4>
+            </div>
+            <div className="login-image">
+              <img src={LoginImage} />
+            </div>
             <div class="get-started">
               <h2>
-                Login or Register to get started{" "}
+                Login or Register to get started <FaArrowAltCircleRight />
                 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
               </h2>
             </div>
           </div>
 
           <div class="login-page">
-            <h3>Login Here</h3>
+            <div className="toggleBox">
+              <button id="loginBtn" className="active toggle-btn" onClick={this.toggleForm}>{this.state.btnText}</button>
+            </div>
             <div class="form">
               <form
                 action="/registration"
                 method="POST"
-                class="registration-form"
+                className="registration-form"
+                id="registerform"
               >
-                <input type="text" name="fname" placeholder="First name" />
-                <input type="text" name="lname" placeholder="Last name" />
-                <input type="password" name="pass" placeholder="Password" />
-                <input type="password" name="cpass" placeholder="Confirm password"/>
-                <input type="tel" name="phone" placeholder="Phone number" />
-                <input type="email" name="email" placeholder="Email" />
-                <button value="submit">Register</button>
-                <p class="message">
+                <div className="loginReg-input">
+                  <input type="text" name="fname" placeholder="First name" />
+                  <input type="text" name="lname" placeholder="Last name" />
+                  <input type="password" name="pass" placeholder="Password" />
+                  <input type="password" name="cpass" placeholder="Confirm password" />
+                  <input type="tel" name="phone" placeholder="Phone number" />
+                  <input type="email" name="email" placeholder="Email" />
+                  <button value="submit">Register</button>
+                  {/* <p class="message">
                   Already registerd? <a href="#">Login</a>
-                </p>
+                </p> */}
+                </div>
               </form>
 
-              <form action="/logindetails" method="POST" class="login-form">
-                <input type="text" name="username" placeholder="username" />
-                <input type="password" name="pass" placeholder="Password" />
+              <form action="/logindetails" method="POST" className="login-form" id="loginform">
+                <div className="loginReg-input">
 
-                <p class="message">
+                  <input type="text" name="username" placeholder="username" />
+                  <input type="password" name="pass" placeholder="Password" />
+                </div>
+
+                {/* <p class="message">
                   Not registerd? <a href="#">Register</a>
-                </p>
+                </p> */}
 
                 {/* <input type="submit">Login</input> */}
                 <button value="submit">Login</button>
-                <a href="main.html">login here</a>
               </form>
             </div>
           </div>

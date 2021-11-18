@@ -1,0 +1,27 @@
+
+
+.toggleBox{
+    margin: 0 auto;
+    width: 50%;
+}
+#loginBtn{
+    color: black;
+    background-color: wheat;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* .loginReg-input input{
+    background-color: black;
+} */
+.login-image img{
+    width: 100%;
+}
+.header h1{
+    color: teal;
+    text-align: center;
+}
+.header h4{
+    text-align: center;
+    color: brown;
+}
