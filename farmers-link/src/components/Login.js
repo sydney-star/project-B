@@ -84,7 +84,7 @@ export class Login extends Component {
                 </p> */}
 
                 {/* <input type="submit">Login</input> */}
-                <button value="submit">Login</button>
+                <button onClick={this.props.action}>Login</button>
               </form>
             </div>
           </div>
