@@ -1,10 +1,4 @@
 import React, { Component } from "react";
-import givinginfo from "../images/givinginfo.jpg";
-import prunning from "../images/prunning.jpg";
-import weedControl from "../images/weedcontrol.jpg";
-import seedTesting from "../images/seedtesting.jpg";
-import soilfertility from "../images/soilfertility.jpg";
-import pestControl from "../images/pestscontrol.jpg";
 import "../css/about.css";
 
 export class About extends Component {
