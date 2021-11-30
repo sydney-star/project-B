@@ -1,17 +1,23 @@
 import React, { Component } from "react";
 import "../css/login.css";
 import LoginImage from '../images/loginImage.png'
-import {FaArrowAltCircleRight, FaArrowRight} from 'react-icons/fa'
+import { FaArrowAltCircleRight, FaArrowRight } from 'react-icons/fa'
+import axios from "axios";
 export class Login extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
       showLogin: true,
-      btnText: 'New user? Register'
+      btnText: 'New user? Register',
+      username: '',
+      pass: '',
+      message:""
     }
 
-    this.toggleForm = this.toggleForm.bind(this)
+    this.toggleForm = this.toggleForm.bind(this);
+    this.inputHandler = this.inputHandler.bind(this);
+    this.authenticateUser = this.authenticateUser.bind(this);
   }
 
   toggleForm() {
@@ -27,6 +33,21 @@ export class Login extends Component {
       })
     }
   }
+
+  inputHandler(e) {
+    this.setState({ [e.target.name]: e.target.value,message:""});
+  }
+
+  authenticateUser(e) {
+    e.preventDefault();
+    const { username, pass } = this.state;
+    axios.post(`/logindetails`, { username, pass })
+      .then((res) => {
+        (res.data.available ? this.props.setUser(res.data, res.data.available) :this.setState({message:"Auth failed"},()=>this.props.rollback(false)))
+      })
+      .catch((err) => alert(err.message));
+  }
+
   render() {
     return (
       <div>
@@ -51,13 +72,9 @@ export class Login extends Component {
             <div className="toggleBox">
               <button id="loginBtn" className="active toggle-btn" onClick={this.toggleForm}>{this.state.btnText}</button>
             </div>
+
             <div class="form">
-              <form
-                action="/registration"
-                method="POST"
-                className="registration-form"
-                id="registerform"
-              >
+              <form action="/registration" method="POST" className="registration-form" id="registerform" >
                 <div className="loginReg-input">
                   <input type="text" name="fname" placeholder="First name" />
                   <input type="text" name="lname" placeholder="Last name" />
@@ -66,26 +83,18 @@ export class Login extends Component {
                   <input type="tel" name="phone" placeholder="Phone number" />
                   <input type="email" name="email" placeholder="Email" />
                   <button value="submit">Register</button>
-                  {/* <p class="message">
-                  Already registerd? <a href="#">Login</a>
-                </p> */}
                 </div>
               </form>
 
-              <form action="/logindetails" method="POST" className="login-form" id="loginform">
+              <form onSubmit={this.authenticateUser} className="login-form" id="loginform">
                 <div className="loginReg-input">
-
-                  <input type="text" name="username" placeholder="username" />
-                  <input type="password" name="pass" placeholder="Password" />
+                  <input type="text" name="username" onChange={this.inputHandler} value={this.state.username} placeholder="username" />
+                  <input type="password" name="pass" onChange={this.inputHandler} value={this.state.pass} placeholder="Password" />
                 </div>
-
-                {/* <p class="message">
-                  Not registerd? <a href="#">Register</a>
-                </p> */}
-
-                {/* <input type="submit">Login</input> */}
+                <div style={{color:"red"}}>{this.state.message}</div>
                 <button value="submit">Login</button>
               </form>
+
             </div>
           </div>
         </div>

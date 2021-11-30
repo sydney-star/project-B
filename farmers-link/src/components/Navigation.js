@@ -6,8 +6,9 @@ export default function Navigation() {
     const links = [
         { name: "Home", to: "/" },
         { name: "About", to: "/about" },
-        { name: "Query and Answers", to: "/query-response" },
+        { name: "Ask", to: "/make-query" },
         { name: "Services", to: "/services" },
+        { name: "Q&A", to: "/question-answers" },
         { name: "Contact", to: "/contact" },
     ]
     return (

@@ -1,7 +1,7 @@
+import { Link } from "@reach/router";
 import React, { Component } from "react";
 import { FaSearch } from "react-icons/fa";
 import '../css/landing.css'
-import LandingImage from '../images/givinginfo.jpg'
 import Slider from "./Slider";
 // import { FaSearch } from 'react-icons/fa';
 
@@ -52,21 +52,11 @@ class Landing extends Component {
             :
             null
           }
-          <a href="#">Common agricultural problems</a>
-          <a href="#">Some solutions to the problems</a>
-          <a href="#">Google maps</a>
-          {/* <a href="#">Upload pictures</a> */}
-          <a href="#">Products reviews</a>
-          {/* <a href="contact.html">Help desk</a> */}
+          <Link to="#">Common agricultural problems</Link>
+          <Link to="#">Some solutions to the problems</Link>
+          <Link to="#">Google maps</Link>
+          <Link to="#">Products reviews</Link>
         </div>
-
-        {/* <div class="subscribe-mail">
-          <form action="" class="my-form">
-            <h3>Enter your email and get the very latest news</h3>
-            <input type="text" className="text" placeholder="Email address" />
-            <input type="button" value="Subscribe!" class="subscribe-button" />
-          </form>
-        </div> */}
       </div>
     );
   }
