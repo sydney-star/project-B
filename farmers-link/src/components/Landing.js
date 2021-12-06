@@ -77,7 +77,7 @@ class Landing extends Component {
           <a onClick={this.solutionsToggle}>Some solutions to the problems</a>
           <a href="#">Google maps</a>
           {/* <a href="#">Upload pictures</a> */}
-          <a onClick={this.productsToggle}>Products reviews</a>
+          <a onClick={this.chemicalToggle}>chemical reviews</a>
           {/* <a href="contact.html">Help desk</a> */}
         </div>
 

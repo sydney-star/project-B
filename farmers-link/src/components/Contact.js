@@ -68,8 +68,8 @@ export class Contact extends Component {
           <div>
             <h2 className="contact-header">Follow us</h2>
             <div className="follow-links">
-              <span> <a href="#"><FaFacebook /><em>Facebook</em> </a></span>
-              <span> <a href="#"><FaTwitter />Twitter </a></span>
+              <span> <a href="https://web.facebook.com/"><FaFacebook /><em>Facebook</em> </a></span>
+              <span> <a href="https://twitter.com/home"><FaTwitter />Twitter </a></span>
               <span> <a href="#"><FaInstagram />Instagram </a></span>
             </div>
           </div>
