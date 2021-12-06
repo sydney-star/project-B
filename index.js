@@ -113,7 +113,7 @@ app.get(`/myqueries/:id`, (req, res) => {
 
 app.get(`/search/:searchKey`, (req, res) => {
   console.log("myquery requests " + req.params.searchKey);
-  let sql = `SELECT * FROM questions WHERE question LIKE '%${req.params.searchKey}%';`;
+  let sql = `SELECT * FROM questions WHERE question LIKE '%${req.params.searchKey}%' OR topic LIKE '%${req.params.searchKey}%';`;
   pool.query(sql, (err, result) => {
     if (err) throw err;
     res.json(result);
