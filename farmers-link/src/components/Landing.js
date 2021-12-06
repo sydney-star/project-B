@@ -1,6 +1,5 @@
 import { Link } from "@reach/router";
 import React, { Component } from "react";
-import { FaSearch } from "react-icons/fa";
 import '../css/landing.css'
 import Slider from "./Slider";
 // import { FaSearch } from 'react-icons/fa';
@@ -56,12 +55,6 @@ class Landing extends Component {
     return (
       <div className="Landing">
         <div class="maincontent-div">
-          <div class="search-box">
-
-            <input className="search-text" type="text" name="" placeholder="Type here to search" /><br />
-            <p><FaSearch /></p>
-
-          </div>
           <div class="image-content">
             <div class="myimage">
               <Slider />
